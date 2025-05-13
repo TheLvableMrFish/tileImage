@@ -7,11 +7,11 @@ const gridDisplay =(line)=>{
     for(let i = 0; i < 600; i++){
 
         let tile = document.createElement('div')
-        i < line && imgGrid[i] == 1 ? tile.className = 'tile black' : i < line && imgGrid[i] == 2 ? tile.className = 'tile red' : tile.className = 'tile'
+        i < line && imgGrid[i] == 1 ? tile.className = 'tile black' : i < line && imgGrid[i] == 2 ? tile.className = 'tile red' : i < line && imgGrid[i] == 3 ? tile.className = 'tile yellow' : tile.className = 'tile'
         imgGrid.push(0)
         tile.addEventListener('click', ()=>{
-            tile.classList.add('red')
-            imgGrid[i] = 2
+            tile.classList.add('yellow')
+            imgGrid[i] = 3
             console.log(imgGrid)
         })
         grid.appendChild(tile)
